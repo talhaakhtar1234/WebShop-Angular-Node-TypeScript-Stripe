@@ -19,13 +19,15 @@ import { MatGridListModule } from "@angular/material/grid-list";
 import { HeaderComponent } from './component/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductHeaderComponent } from './pages/home/component/product-header/product-header.component';
+import { FiltersComponent } from './pages/home/component/filters/filters.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    ProductHeaderComponent
+    ProductHeaderComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,
