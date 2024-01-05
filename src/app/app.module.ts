@@ -22,7 +22,7 @@ import { ProductHeaderComponent } from './pages/home/component/product-header/pr
 import { FiltersComponent } from './pages/home/component/filters/filters.component';
 import { ProductBoxComponent } from './pages/home/component/product-box/product-box.component';
 import { CartComponent } from './pages/cart/cart.component';
-
+import {CartService } from './services/cart.service'
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +52,7 @@ import { CartComponent } from './pages/cart/cart.component';
 
 
   ],
-  providers: [],
+  providers: [CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
