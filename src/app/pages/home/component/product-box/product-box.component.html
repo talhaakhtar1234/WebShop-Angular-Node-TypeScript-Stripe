@@ -1,47 +1,27 @@
 <mat-card [ngClass]="{'text-center': !fullWidthMode}">
-  <div *ngIf="fullWidthMode" class="item-container flex justify-between">
-    <div class="item-image-container w-full md:w-1/2">
-        <img class="mb-4 mx-auto h-[360px]" [src]="productImageUrl" alt="Item Image">
-    </div>
-    <div class="item-details-container w-full md:w-1/2 p-4  rounded-lg flex flex-col">
-        <h5 class="text-2xl font-bold text-gray-800">{{ productName }}</h5>
-        <p class="text-lg text-gray-600">{{ productType }}</p>
-        <p class="text-gray-700">{{ productDescription }}</p>
-
-        <div class="flex-grow"></div>
-
-        <div class="flex justify-between items-center mt-4">
-            <span class="text-red-500 font-bold text-lg">
-                {{ productPrice | currency }}
-            </span>
-            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue">
-                <mat-icon class="mat-18 text-white">shopping_cart</mat-icon> Add to Cart
-            </button>
-        </div>
-    </div>
-</div>
 
 
-<div *ngIf="!fullWidthMode" class="card">
-  <img [src]="productImageUrl" class="card-img-top" alt="Product Image">
-  <div class="card-body">
-    <h5 class="card-title">{{ productName }}</h5>
-    <p class="card-text truncate hover:whitespace-normal">{{ productType }}</p>
-    <p *ngIf="fullWidthMode" class="card-text">{{ productDescription }}</p>
+ <div [ngClass]="{flex:fullWidthMode}">
+<img class="mb-1 mx-auto h-[200px]"
+[ngClass]="{'h-200px':!fullWidthMode,'h-[360px]':fullWidthMode}"
+src="http://via.placeholder.com/150" alt="">
+
+<div class="w-full" [ngClass]="{'px-8 flex flex-col justify-between':fullWidthMode}">
+  <div>
+    <h5>Shoes</h5>
+    <p class="truncate hover:whitespace-normal">Snickers</p>
+    <p *ngIf="fullWidthMode">Description</p>
+
   </div>
-  <div class="card-footer d-flex justify-content-between align-items-center">
-    <span class="text-red-500 font-bold text-lg">
-      {{ productPrice | currency }}
+
+  <div class="flex justify-between">
+    <span class="text-red-400">
+      {{'150' | currency}}
     </span>
-    <button class="btn btn-primary">
-      <i class="material-icons text-white">shopping_cart</i> Add to Cart
+    <button>
+      <mat-icon class="text-gray-500 mat-18">shopping_cart</mat-icon>
     </button>
   </div>
 </div>
-
-
-
-
-
-
+</div>
 </mat-card>
