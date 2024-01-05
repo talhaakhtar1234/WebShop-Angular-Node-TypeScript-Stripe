@@ -14,7 +14,7 @@ export class ProductBoxComponent implements OnInit {
     price:150,
     category:'Shoes',
     description:"Description",
-    image:'http://via.placeholder.com/150S'
+    image:'http://via.placeholder.com/150'
   }
 
   @Output() addToCart=new EventEmitter();
