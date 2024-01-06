@@ -25,7 +25,7 @@ import { CartComponent } from './pages/cart/cart.component';
 import {CartService } from './services/cart.service'
 import { StoreService } from './services/store.service';
 import { HttpClientModule } from '@angular/common/http';
-import { TalhaComponent } from './talha/talha.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,8 +34,7 @@ import { TalhaComponent } from './talha/talha.component';
     ProductHeaderComponent,
     FiltersComponent,
     ProductBoxComponent,
-    CartComponent,
-    TalhaComponent
+    CartComponent
   ],
   imports: [
     BrowserModule,
